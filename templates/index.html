@@ -1,0 +1,114 @@
+<html>
+<head>
+  <title>MAST</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />        
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<p><h1 align="center">Post Machine Algorithm Collaboration Software</h1></p>
+
+<div class="container">
+<div class="row">
+  <div class="col" width="300">
+    <h4> Select an image to upload</h4>
+    <p>
+      {% with messages = get_flashed_messages() %}
+        {% if messages %}
+          <ul>
+          {% for message in messages %}
+            <li>{{ message }}</li>
+          {% endfor %}
+          </ul>
+        {% endif %}
+      {% endwith %}
+    </p>
+      <img src="{{ url_for('display_image', filename=session['content_file']) }}"
+      width="300"
+      height="300"/>
+    <form method="post" action="/"  width="300" enctype="multipart/form-data">
+    <dl>
+        <p width="300">
+            <input type="file" name="content_file" width="300" class="form-control" autocomplete="off" required>
+        </p>
+    </dl>
+    <p>
+        <input type="submit" value="Submit"  class="btn btn-info">
+    </p>
+    </form>
+  </div>
+</div>
+</div>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+<script>
+  function getOption() {
+    $.ajax({
+      url:'http://127.0.0.1:5000/maskInter/',
+      data:{
+        n:$("#n_value").val(),
+        cm:$("#cm").val(),
+        cm2:$("#cm2").val()
+      },
+      success: function(x) {
+                console.log(x)
+                let output = $('img').attr('src', x)
+            },
+    })
+  };
+
+  function updateTextInput(val) {
+    $("#textInput").val(val);
+    }
+</script>
+
+<div class='container'>
+    <div id='output'> <img /></div> <!--can include dimensions within img placeholder-->
+      <form method="POST" action="test">
+        <input type="range" min="3" max="25" step="2" name="n_value" id="n_value" onchange="updateTextInput(this.value); getOption()" />
+        <input type="text" id="textInput" value="">
+      </form>
+      <form>
+        <label for="cm">Choose first colormap:</label>
+        <select name="cm" id="cm" onchange="getOption()">
+          <option value="None" selected>None</option>
+          <option value="Spectral">Spectral</option>
+          <option value="gist_earth">Gist Earth</option>
+          <option value="spring">Spring</option>
+          <option value="twilight">Twilight</option>
+          <option value="Pastel1">Pastel1</option>
+          <option value="Pastel2">Pastel2</option>
+          <option value="Paired">Paired</option>
+          <option value="tab10">Tab10</option>
+          <option value="tab20">Tab20</option>
+          <option value="tab20b">Tab20b</option>
+          <option value="flag">Flag</option>
+          <option value="prism">Prism</option>
+          <option value="rainbow">Rainbow</option>
+          <option value="turbo">Turbo</option>
+          <option value="gist_ncar">Gist Ncar</option>
+          <option value="terrain">Terrain</option>
+          <option value="gnuplot">Gnuplot</option>
+        </select>
+        <label for="cm2">Choose second colormap:</label>
+        <select name="cm2" id="cm2" onchange="getOption()">
+          <option value="None" selected>None</option>
+          <option value="hot">Hot</option>
+          <option value="cool">Cool</option>
+          <option value="spring">Spring</option>
+          <option value="summer">Summer</option>
+          <option value="winter">Winter</option>          
+          <option value="autumn">Autumn</option>
+          <option value="Pastel1">Pastel1</option>
+          <option value="Pastel2">Pastel2</option>
+          <option value="Reds">Red</option>
+          <option value="copper">Copper</option>
+        </select>
+      </form>
+
+</div>
+</body>
+</html>
