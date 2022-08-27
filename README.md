@@ -15,3 +15,6 @@ This software can be accessed via http://PMACS.herokuapp.com
 Morgan Benton https://github.com/morphatic advised and collaborated on this project
 
 Roy Tutorials https://roytuts.com/upload-and-display-image-using-python-flask/ 
+
+Yağmur Çiğdem Aktaş https://yagmurcigdemaktas.medium.com/
+https://towardsdatascience.com/image-segmentation-with-classical-computer-vision-based-approaches-80c75d6d995f
