@@ -68,6 +68,7 @@
 <div class='container'>
     <div id='output'> <img /></div> <!--can include dimensions within img placeholder-->
       <form method="POST" action="test">
+        <label for="n_value">Outline Thickness (Pixels)</label>
         <input type="range" min="3" max="25" step="2" name="n_value" id="n_value" onchange="updateTextInput(this.value); getOption()" />
         <input type="text" id="textInput" value="">
       </form>
