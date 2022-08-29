@@ -20,7 +20,7 @@ First click "Choose File" then select a file from the explorer and select "Open"
 
 Making a selection on the "Outline Thickness" slider or either colormap dropdown menu will display a new image with the changes the user has selected, allowing for comparison on the same screen, as well as real time edits.
 
-<p align="center>
+<p align="center">
   <img width="885" align="center" alt="image" src="https://user-images.githubusercontent.com/89647114/187095176-14e8379f-ff7f-4d05-b1d5-a4bbb7d2878d.png">
 </p>
 
