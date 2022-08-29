@@ -16,9 +16,9 @@ The first step of using PMACS is uploading an image to manipulate.
   <img width="164" alt="image" src="https://user-images.githubusercontent.com/89647114/187094984-2650c02b-629d-4c6d-903b-06481adb0b33.png">
 </p>
 
-First click "Choose File" then select a file from the explorer and select "Open", then click the submit button to confirm the choice. 
+First click "Choose File". Select a file from the explorer, then click "Open". Click the submit button to confirm the choice. 
 
-Making a selection on the "Outline Thickness" slider or either colormap dropdown menu will display a new image with the changes the user has selected, allowing for comparison on the same screen, as well as real time edits.
+Making a selection on the "Outline Thickness" slider or either colormap dropdown menu will automatically display a new image that applies the changes that the user has made, allowing for comparison on the same screen as well as real time edits.
 
 <p align="center">
   <img width="885" align="center" alt="image" src="https://user-images.githubusercontent.com/89647114/187095176-14e8379f-ff7f-4d05-b1d5-a4bbb7d2878d.png">
