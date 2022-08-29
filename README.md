@@ -10,11 +10,8 @@ This software can be accessed via http://PMACS.herokuapp.com
 
 ## Usage
 
-The first step of using PMACS is uploading an image to manipulate.
+The first step of using PMACS is uploading an image to manipulate.  <img width="164" alt="image" src="https://user-images.githubusercontent.com/89647114/187094984-2650c02b-629d-4c6d-903b-06481adb0b33.png">
 
-<p align="center">
-  <img width="164" alt="image" src="https://user-images.githubusercontent.com/89647114/187094984-2650c02b-629d-4c6d-903b-06481adb0b33.png">
-</p>
 
 First click "Choose File". Select a file from the explorer, then click "Open". Click the submit button to confirm the choice. 
 
